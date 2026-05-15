@@ -2,6 +2,11 @@
 
 Production-grade executive CX intelligence dashboard for bank leadership: president, CEO, board, CDTO, Head of CX, retail leadership and executive management.
 
+## Links
+
+- GitHub: https://github.com/memelya/cx-voice-of-customer-dashboard
+- Live: https://cx-voice-of-customer-dashboard.vercel.app
+
 ## Design philosophy
 
 - **Signal > noise**: numbers, deltas, trends and risk heat instead of marketing copy.
