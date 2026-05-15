@@ -1,0 +1,46 @@
+@import "tailwindcss";
+
+:root {
+  --background: #05070a;
+  --foreground: #f5f7fb;
+  --muted: #98a2b3;
+  --panel: rgba(12, 17, 24, 0.78);
+  --line: rgba(255, 255, 255, 0.08);
+}
+
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  margin: 0;
+  color: var(--foreground);
+  background:
+    radial-gradient(circle at 16% 0%, rgba(63, 131, 248, 0.22), transparent 28rem),
+    radial-gradient(circle at 88% 8%, rgba(20, 184, 166, 0.15), transparent 30rem),
+    linear-gradient(180deg, #04060a 0%, #071018 50%, #f4f7fb 50%, #eef2f7 100%);
+  font-family: var(--font-geist-sans), Inter, system-ui, -apple-system, Segoe UI, sans-serif;
+}
+::selection { background: rgba(45, 212, 191, .35); }
+
+.dashboard-grid {
+  background-image: linear-gradient(rgba(255,255,255,.055) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,.055) 1px, transparent 1px);
+  background-size: 44px 44px;
+  mask-image: linear-gradient(to bottom, black, transparent 85%);
+}
+
+.card {
+  border: 1px solid rgba(255,255,255,.09);
+  background: linear-gradient(180deg, rgba(16, 24, 39, .86), rgba(9, 13, 20, .72));
+  box-shadow: 0 24px 80px rgba(0,0,0,.24);
+  backdrop-filter: blur(18px);
+}
+.light-card {
+  border: 1px solid rgba(15, 23, 42, .08);
+  background: rgba(255,255,255,.78);
+  box-shadow: 0 18px 60px rgba(15,23,42,.08);
+  backdrop-filter: blur(18px);
+}
+.metric-tabular { font-variant-numeric: tabular-nums; }
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { animation-duration: .001ms !important; transition-duration: .001ms !important; scroll-behavior: auto !important; }
+}
