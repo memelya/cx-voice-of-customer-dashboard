@@ -1,53 +1,53 @@
-# Голос клиента и CX — Executive Command Center
+# Голос клиента и CX — Командный центр
 
-Production-grade executive CX intelligence dashboard for bank leadership: president, CEO, board, CDTO, Head of CX, retail leadership and executive management.
+Готовая к запуску панель CX-аналитики для руководства банка: президент, CEO, правление, CDTO, руководитель CX, руководитель розничного бизнеса и исполнительный менеджмент.
 
-## Links
+## Ссылки
 
 - GitHub: https://github.com/memelya/cx-voice-of-customer-dashboard
 - Live: https://cx-voice-of-customer-dashboard.vercel.app
 
-## Design philosophy
+## Дизайн-философия
 
-- **Signal > noise**: numbers, deltas, trends and risk heat instead of marketing copy.
-- **30–90 second executive readout**: current CX state, previous state, what improved, what worsened, why, and what to do next.
-- **Bloomberg + Apple + Stripe + McKinsey dashboard** aesthetic: premium, calm, dense, analytical.
-- **Synthetic enterprise-grade data**: realistic, correlated, causally believable banking CX model.
+- **Сигнал > шум**: цифры, дельты, тренды и тепловая карта рисков вместо маркетингового текста.
+- **Краткий отчёт для руководства за 30–90 секунд**: текущее состояние CX, что было раньше, что улучшилось, что ухудшилось, почему и что делать дальше.
+- **Эстетика Bloomberg + Apple + Stripe + McKinsey-панели**: премиально, спокойно, плотно, аналитично.
+- **Синтетические данные корпоративного уровня**: реалистичная, взаимосвязанная и причинно-правдоподобная модель банковского CX.
 
-## Architecture
+## Архитектура
 
 ```text
-app/                  Next.js app router pages and global styles
-components/           Dashboard shell and reusable chart components
-content/cx-data.ts    Synthetic banking CX dataset and model
-lib/                  Shared utilities
-public/               Static assets
+app/                  страницы Next.js App Router и глобальные стили
+components/           оболочка панели и переиспользуемые графики
+content/cx-data.ts    синтетический датасет банковского CX и модель метрик
+lib/                  общие утилиты
+public/               статические файлы
 ```
 
-## Metrics model
+## Модель метрик
 
-The dashboard covers:
+Панель покрывает:
 
-- CX Health Score, NPS, CSI, retention, churn risk
-- Digital satisfaction, complaints, resolution time
-- Voice-of-customer pain points and sentiment evolution
-- Journey health: onboarding, mobile app, cards, payments, support, loans, mortgage, branch, call center
-- Root cause impact ranking and confidence
-- Initiative before/after impact and ROI
-- Recommendation priority matrix
-- Segment and channel CX comparisons
-- Future scenario simulation
+- индекс здоровья CX, NPS, CSI, удержание, риск оттока;
+- цифровую удовлетворённость, жалобы, время решения;
+- болевые точки голоса клиента и динамику тональности;
+- здоровье клиентских путей: онбординг, мобильное приложение, карты, платежи, поддержка, кредиты, ипотека, отделения, колл-центр;
+- ранжирование первопричин по влиянию и достоверности;
+- эффект инициатив до/после и ROI;
+- матрицу приоритизации рекомендаций;
+- сравнение CX по сегментам и каналам;
+- моделирование будущих сценариев.
 
-## Tech stack
+## Технологии
 
 - Next.js + TypeScript
 - Tailwind CSS
-- shadcn/ui-style component primitives
+- компонентные примитивы в стиле shadcn/ui
 - Framer Motion
 - Recharts
 - Lucide Icons
 
-## Local development
+## Локальный запуск
 
 ```bash
 npm install
@@ -55,24 +55,24 @@ npm run dev
 npm run build
 ```
 
-## Deployment
+## Деплой
 
-Preferred target: **Vercel**.
+Рекомендуемая платформа: **Vercel**.
 
 ```bash
 npm run build
 ```
 
-Then connect the GitHub repository to Vercel or deploy via the Vercel CLI/API using secure environment secrets. Do not commit `.env`, tokens, `.vercel/`, build output or logs.
+Затем подключите репозиторий GitHub к Vercel или выполните deploy через Vercel CLI/API, используя защищённые secrets. Не коммитьте `.env`, токены, `.vercel/`, результаты сборки или логи.
 
-## Synthetic data explanation
+## Объяснение синтетических данных
 
-All data is synthetic and generated to behave like an enterprise banking CX dataset:
+Все данные синтетические и построены как корпоративный датасет банковского CX:
 
-- complaint spikes are linked to onboarding KYC latency and support SLA breaches;
-- card delivery improves after ETA synchronization initiative;
-- premium retention improves after priority chat rollout;
-- mortgage remains high-effort due to document rework loops;
-- future scenarios project NPS, retention and churn changes based on prioritized operational fixes.
+- всплески жалоб связаны с задержками KYC в онбординге и нарушениями SLA поддержки;
+- доставка карт улучшается после синхронизации ETA;
+- удержание premium-сегмента растёт после запуска приоритетного чата;
+- ипотека остаётся требующим больших усилий из-за циклов повторной доработки документов;
+- будущие сценарии прогнозируют изменения NPS, удержания и оттока на основе приоритетных операционных исправлений.
 
-No real customer data is included.
+Реальные клиентские данные не используются.

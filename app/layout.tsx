@@ -6,11 +6,11 @@ const geistSans = Geist({ variable: "--font-geist-sans", subsets: ["latin", "cyr
 const geistMono = Geist_Mono({ variable: "--font-geist-mono", subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Голос клиента и CX — Executive Command Center",
-  description: "Executive-level мониторинг клиентского опыта банка: NPS, CSI, retention, complaints, journeys, root causes и next-best actions.",
+  title: "Голос клиента и CX — Командный центр",
+  description: "Мониторинг клиентского опыта банка для топ-менеджмента: NPS, CSI, удержание, жалобы, клиентские пути, первопричины и следующие действия.",
   openGraph: {
     title: "Голос клиента и CX",
-    description: "CX intelligence dashboard для топ-менеджмента банка.",
+    description: "Панель CX-аналитики для топ-менеджмента банка.",
     type: "website"
   }
 };
